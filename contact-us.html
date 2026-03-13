@@ -35,20 +35,36 @@
     <link rel="stylesheet" href="./docs/Style.css" />
 </head>
 
-<body data-page="contact-us" class="bg-[#f7fbfe] text-slate-900 antialiased">
+<body data-page="contact-us" class="bg-[#f7fbfe] text-slate-900 antialiased is-loading">
+    <div id="siteLoader" class="site-loader">
+        <div class="site-loader__panel">
+            <div class="site-loader__mark" aria-hidden="true">
+                <span class="site-loader__ring"></span>
+                <span class="site-loader__ring site-loader__ring--delay"></span>
+                <span class="site-loader__core"><i class="fa-solid fa-faucet-drip"></i></span>
+            </div>
+            <p class="site-loader__eyebrow">Local Plumbing Service</p>
+            <h2 class="site-loader__title">Plumber Near Me</h2>
+            <p class="site-loader__text">Preparing a cleaner, faster service experience for your visit.</p>
+            <div class="site-loader__progress" aria-hidden="true">
+                <span class="site-loader__progress-bar"></span>
+            </div>
+            <p class="site-loader__note">Loading residential plumbing support</p>
+        </div>
+    </div>
     <div id="navbar"></div>
 
     <main>
         <!-- Hero Section -->
-        <section class="pt-36 text-white sm:pt-20" style="background-image: linear-gradient(rgba(48, 54, 61, 0.88), rgba(48, 54, 61, 0.9)), url('https://images.unsplash.com/photo-1749532125405-70950966b0e5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
+        <section class="pt-16 text-white sm:pt-20" style="background-image: linear-gradient(rgba(48, 54, 61, 0.88), rgba(48, 54, 61, 0.9)), url('https://images.unsplash.com/photo-1749532125405-70950966b0e5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); background-size: cover; background-position: center;">
             <div class="mx-auto max-w-7xl px-4 pb-20 sm:px-6 lg:px-8 lg:pb-24">
                 <div class="mx-auto max-w-5xl text-center">
                     <div data-aos="fade-up">
                         <span class="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#8fd0f1]">
                             Contact Plumber Near Me
                         </span>
-                        <h1 class="mx-auto mt-6 max-w-4xl text-4xl font-semibold uppercase leading-tight text-white sm:text-5xl">
-                            Tell Us What Is Happening At Home And We Will Help You Take The Next Step.
+                        <h1 class="mx-auto mt-6 max-w-2xl text-4xl font-semibold uppercase leading-tight text-white sm:text-5xl">
+                            Tell Us What Is Happening At Home.
                         </h1>
                         <p class="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/72 sm:text-lg">
                             Use the contact page for drain issues, water heater problems, sump pump work, water line concerns, garbage disposal service, and residential pipe replacement needs.
@@ -76,7 +92,7 @@
                     <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                         Reach Out Your Way
                     </span>
-                    <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">Choose the contact option that fits how quickly you need help.</h2>
+                    <h2 class="mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">Choose the best way to reach us.</h2>
                     <p class="mt-5 text-base leading-8 text-slate-600">Some homeowners want to call right away. Others prefer to send service details first. This page gives both options while keeping the next step clear.</p>
                 </div>
 
@@ -117,7 +133,7 @@
                             <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                                 Request Service
                             </span>
-                            <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">Share the details and make the service request easier to handle.</h2>
+                            <h2 class="mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">Share the details of your service request.</h2>
                             <p class="mt-5 text-base leading-8 text-slate-600">The more useful information you provide, the easier it is to understand the issue and point you toward the right kind of visit.</p>
                         </div>
 
@@ -215,7 +231,7 @@
                         <span class="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#8fd0f1]">
                             Before You Reach Out
                         </span>
-                        <h2 class="mt-5 text-3xl font-semibold sm:text-4xl">A few details can make the service conversation much easier.</h2>
+                        <h2 class="mt-5 text-2xl font-semibold sm:text-4xl">A few details help us move faster.</h2>
                         <p class="mt-5 text-base leading-8 text-white/72">You do not need to diagnose the problem yourself, but simple information about what is happening can help the request move faster and more clearly.</p>
                     </div>
                     <div class="grid gap-4 sm:grid-cols-2">
@@ -249,7 +265,7 @@
                     <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                         Contact Questions
                     </span>
-                    <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">A few answers before you call or send the form.</h2>
+                    <h2 class="mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">Answers before you call or book.</h2>
                     <p class="mt-5 text-base leading-8 text-slate-600">The contact page should answer the common questions homeowners have before starting a plumbing service request.</p>
                 </div>
 
@@ -315,5 +331,7 @@
 </body>
 
 </html>
+
+
 
 

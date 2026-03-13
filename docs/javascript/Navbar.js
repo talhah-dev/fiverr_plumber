@@ -27,11 +27,7 @@ if (navbar) {
       return `
         <a
           href="${item.href}"
-          class="rounded-full px-4 py-2 text-sm font-semibold transition ${
-            active
-              ? "bg-[#42A5DC]/12 text-[#1b78ab]"
-              : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-          }"
+          class="nav-pill ${active ? "is-active bg-[#42A5DC]/12 text-[#1b78ab]" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"} rounded-full px-4 py-2 text-sm font-semibold transition"
         >
           ${item.label}
         </a>
@@ -47,7 +43,7 @@ if (navbar) {
           href="${item.href}"
           class="rounded-2xl px-4 py-3 text-sm font-semibold transition ${
             active
-              ? "bg-[#42A5DC] text-white"
+              ? "bg-[#42A5DC] text-white shadow-[0_16px_34px_rgba(66,165,220,0.24)]"
               : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
           }"
         >
@@ -83,7 +79,7 @@ if (navbar) {
           href="${item.href}"
           class="rounded-2xl px-4 py-3 text-sm font-medium transition ${
             active
-              ? "bg-[#42A5DC] text-white"
+              ? "bg-[#42A5DC] text-white shadow-[0_16px_34px_rgba(66,165,220,0.24)]"
               : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
           }"
         >
@@ -94,27 +90,27 @@ if (navbar) {
     .join("");
 
   navbar.innerHTML = `
-    <header id="siteHeader" class="site-header sticky top-0 z-50 border-b border-slate-200/80 bg-white/92 backdrop-blur">
-      <div class="hidden border-b border-white/10 bg-[#30363d] text-white lg:block">
+    <header id="siteHeader" class="site-header border-b border-slate-200/80 bg-white/92 backdrop-blur">
+      <div class="topbar-shell hidden border-b border-white/10 text-white lg:block">
         <div class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-6 py-3 text-xs font-medium tracking-[0.12em] text-white/82 lg:px-8">
-          <div class="flex items-center gap-6">
+          <div class="relative z-[1] flex items-center gap-6">
             <a href="tel:6155550148" class="inline-flex items-center gap-2 transition hover:text-white">
-              <i class="fa-solid fa-phone-volume text-[#42A5DC]"></i>
+              <i class="fa-solid fa-phone-volume text-[#8fd0f1]"></i>
               Call For Service Today
             </a>
             <span class="inline-flex items-center gap-2 text-white/70">
-              <i class="fa-solid fa-clock text-[#42A5DC]"></i>
+              <i class="fa-solid fa-clock text-[#8fd0f1]"></i>
               Fast scheduling for plumbing visits
             </span>
           </div>
-          <p class="text-white/68">Sump pumps, drains, water heaters, water lines, and pipe replacement</p>
+          <p class="relative z-[1] text-white/68">Sump pumps, drains, water heaters, water lines, and pipe replacement</p>
         </div>
       </div>
 
       <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div class="flex items-center justify-between gap-4 py-4">
           <a href="./index.html" class="flex min-w-0 items-center gap-3 text-slate-900">
-            <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC] text-white shadow-[0_14px_28px_rgba(66,165,220,0.24)]">
+            <span class="brand-mark flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC] text-white shadow-[0_18px_34px_rgba(66,165,220,0.28)]">
               <i class="fa-solid fa-faucet-drip text-lg"></i>
             </span>
             <span class="min-w-0 leading-none">
@@ -130,17 +126,13 @@ if (navbar) {
             <div class="group relative -my-3 py-3">
               <button
                 type="button"
-                class="inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition ${
-                  isServicePage
-                    ? "bg-[#42A5DC]/12 text-[#1b78ab]"
-                    : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"
-                }"
+                class="nav-pill ${isServicePage ? "is-active bg-[#42A5DC]/12 text-[#1b78ab]" : "text-slate-700 hover:bg-slate-100 hover:text-slate-900"} inline-flex items-center gap-2 rounded-full px-4 py-2 text-sm font-semibold transition"
               >
                 Services
                 <i class="fa-solid fa-chevron-down text-[0.72rem]"></i>
               </button>
               <div class="pointer-events-none absolute left-1/2 top-full z-20 w-[22rem] -translate-x-1/2 pt-2 opacity-0 transition duration-200 group-hover:pointer-events-auto group-hover:opacity-100">
-                <div class="rounded-[1.5rem] border border-slate-200 bg-white p-3 shadow-[0_22px_55px_rgba(15,23,42,0.12)]">
+                <div class="service-dropdown rounded-[1.5rem] border border-slate-200 p-3">
                   <div class="grid gap-1">
                     ${serviceMenu}
                   </div>
@@ -150,7 +142,7 @@ if (navbar) {
           </nav>
 
           <div class="hidden items-center gap-3 lg:flex xl:min-w-[15rem] xl:justify-end">
-            <a href="tel:6155550148" class="inline-flex items-center gap-3 rounded-full border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#42A5DC]/40 hover:text-slate-900">
+            <a href="tel:6155550148" class="inline-flex items-center gap-3 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#42A5DC]/40 hover:text-slate-900">
               <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-[#42A5DC]/12 text-[#42A5DC]">
                 <i class="fa-solid fa-phone"></i>
               </span>
@@ -158,7 +150,7 @@ if (navbar) {
             </a>
             <a
               href="./contact-us.html"
-              class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#3696cb]"
+              class="nav-cta inline-flex items-center gap-2 rounded-full bg-[#42A5DC] px-5 py-3 text-sm font-semibold text-white transition hover:bg-[#3696cb]"
             >
               Book Now
               <i class="fa-solid fa-arrow-right text-xs"></i>
@@ -178,11 +170,11 @@ if (navbar) {
 
         <div
           id="mobileMenu"
-          class="pointer-events-none max-h-0 overflow-y-auto overscroll-contain border-t border-slate-200 px-1 opacity-0 transition-all duration-300 lg:hidden"
+          class="mobile-card pointer-events-none max-h-0 overflow-y-auto overscroll-contain border-t border-slate-200 px-1 opacity-0 transition-all duration-300 lg:hidden"
         >
           <div class="flex flex-col gap-2 py-4 pr-1">
             ${mobileLinks}
-            <div class="mt-1 rounded-[1.5rem] border border-slate-200 bg-slate-50 p-3">
+            <div class="mt-1 rounded-[1.5rem] border border-slate-200 bg-slate-50/90 p-3">
               <p class="px-2 pb-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#42A5DC]">Services</p>
               <div class="flex flex-col gap-1">
                 ${mobileServiceMenu}
@@ -190,14 +182,14 @@ if (navbar) {
             </div>
             <a
               href="tel:6155550148"
-              class="mt-2 inline-flex items-center justify-center gap-3 rounded-2xl border border-slate-200 px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#42A5DC]/35 hover:text-slate-900"
+              class="mt-2 inline-flex items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-[#42A5DC]/35 hover:text-slate-900"
             >
               <i class="fa-solid fa-phone-volume text-[#42A5DC]"></i>
               Call Now
             </a>
             <a
               href="./contact-us.html"
-              class="inline-flex items-center justify-center gap-3 rounded-2xl bg-[#42A5DC] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#3696cb]"
+              class="nav-cta inline-flex items-center justify-center gap-3 rounded-2xl bg-[#42A5DC] px-4 py-3 text-sm font-semibold text-white transition hover:bg-[#3696cb]"
             >
               Book Service
               <i class="fa-solid fa-arrow-right text-sm"></i>

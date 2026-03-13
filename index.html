@@ -37,7 +37,23 @@
     <link rel="stylesheet" href="./docs/Style.css" />
 </head>
 
-<body data-page="home" class="bg-[#f7fbfe] text-slate-900 antialiased">
+<body data-page="home" class="bg-[#f7fbfe] text-slate-900 antialiased is-loading">
+    <div id="siteLoader" class="site-loader">
+        <div class="site-loader__panel">
+            <div class="site-loader__mark" aria-hidden="true">
+                <span class="site-loader__ring"></span>
+                <span class="site-loader__ring site-loader__ring--delay"></span>
+                <span class="site-loader__core"><i class="fa-solid fa-faucet-drip"></i></span>
+            </div>
+            <p class="site-loader__eyebrow">Local Plumbing Service</p>
+            <h2 class="site-loader__title">Plumber Near Me</h2>
+            <p class="site-loader__text">Preparing a cleaner, faster service experience for your visit.</p>
+            <div class="site-loader__progress" aria-hidden="true">
+                <span class="site-loader__progress-bar"></span>
+            </div>
+            <p class="site-loader__note">Loading residential plumbing support</p>
+        </div>
+    </div>
     <div id="navbar"></div>
 
     <main>
@@ -49,7 +65,7 @@
             <div class="plumber-hero__shade"></div>
             <div class="plumber-hero__grid"></div>
 
-            <div class="relative mx-auto flex min-h-screen max-w-7xl items-center justify-center px-4 pb-16 pt-36 text-center sm:px-6 md:pt-20 lg:px-8 lg:pb-20">
+            <div class="relative mx-auto flex min-h-screen max-w-7xl items-center justify-center px-4 pb-16 pt-16 text-center sm:px-6 md:pt-20 lg:px-8 lg:pb-20">
                 <div class="mx-auto max-w-5xl">
                     <span data-aos="fade-up"
                         class="inline-flex items-center gap-2 rounded-full border border-white/14 bg-white/[0.08] px-4 py-2 text-xs font-semibold uppercase tracking-[0.24em] text-white/85 backdrop-blur">
@@ -65,18 +81,18 @@
                     </h1>
 
                     <p data-aos="fade-up" data-aos-delay="180"
-                        class="mx-auto mt-6 max-w-3xl text-base leading-8 text-white/78 md:text-lg">
+                        class="mx-auto mt-6 max-w-3xl text-base md:leading-8 text-white/78 md:text-lg">
                         Plumber Near Me delivers clean, professional plumbing support for homeowners who need fast scheduling, dependable workmanship, and straightforward service from the first call.
                     </p>
 
                     <div data-aos="fade-up" data-aos-delay="240" class="mt-9 flex flex-col items-center justify-center gap-4 sm:flex-row">
                         <a href="./contact-us.html"
-                            class="inline-flex items-center justify-center gap-3 rounded-full bg-[#42A5DC] px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#3696cb]">
+                            class="inline-flex md:w-auto w-full items-center justify-center gap-3 rounded-full bg-[#42A5DC] px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-[#3696cb]">
                             <i class="fa-solid fa-calendar-check"></i>
                             Get A Quote
                         </a>
                         <a href="tel:0000000000"
-                            class="inline-flex items-center justify-center gap-3 rounded-full border border-white/14 bg-white/[0.05] px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white/[0.10]">
+                            class="inline-flex md:w-auto w-full items-center justify-center gap-3 rounded-full border border-white/14 bg-white/[0.05] px-7 py-4 text-sm font-semibold uppercase tracking-[0.16em] text-white transition hover:bg-white/[0.10]">
                             <i class="fa-solid fa-phone-volume"></i>
                             Call Now
                         </a>
@@ -103,37 +119,40 @@
             </div>
         </section>
 
-        <!-- Trust Bar Section -->
+        <!-- Stats Section -->
         <section class="bg-[#f7fbfe]">
             <div class="mx-auto max-w-7xl px-4 py-6 md:py-14 sm:px-6 lg:px-8">
-                <div class="grid gap-4 rounded-[2rem] border border-slate-200 bg-[#fbfdff] p-5 shadow-[0_16px_40px_rgba(15,23,42,0.04)] md:grid-cols-3 md:p-6">
-                    <div data-aos="fade-up" class="flex items-start gap-4 rounded-[1.4rem] bg-white px-4 py-4 shadow-sm shadow-slate-200/60">
-                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
-                            <i class="fa-solid fa-faucet-drip"></i>
+                <div id="homeStats" class="stats-shell grid gap-4 rounded-[2rem] border border-slate-200 bg-[#fbfdff] p-5 shadow-[0_16px_40px_rgba(15,23,42,0.04)] md:grid-cols-3 md:p-6">
+                    <article data-aos="fade-up" class="stats-card rounded-[1.6rem] bg-white px-5 py-6 text-center shadow-sm shadow-slate-200/60 transition">
+                        <span class="mx-auto flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
+                            <i class="fa-solid fa-calendar-check"></i>
                         </span>
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Residential Focus</p>
-                            <p class="mt-2 text-sm leading-7 text-slate-600">Built around the plumbing needs homeowners face every day, from backups to replacements.</p>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="120" class="flex items-start gap-4 rounded-[1.4rem] bg-white px-4 py-4 shadow-sm shadow-slate-200/60">
-                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
-                            <i class="fa-solid fa-shield-heart"></i>
+                        <p class="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Years Of Service</p>
+                        <p class="mt-3 text-4xl font-semibold text-slate-900 sm:text-5xl">
+                            <span class="counter-value" data-counter="15" data-counter-suffix="+">0</span>
+                        </p>
+                        <p class="mt-3 text-sm leading-7 text-slate-600">Built around steady residential plumbing work and dependable day-to-day support.</p>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="120" class="stats-card rounded-[1.6rem] bg-white px-5 py-6 text-center shadow-sm shadow-slate-200/60 transition">
+                        <span class="mx-auto flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
+                            <i class="fa-solid fa-house-circle-check"></i>
                         </span>
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Careful Work</p>
-                            <p class="mt-2 text-sm leading-7 text-slate-600">Respectful service inside your home with cleaner work habits and clear communication.</p>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-delay="180" class="flex items-start gap-4 rounded-[1.4rem] bg-white px-4 py-4 shadow-sm shadow-slate-200/60">
-                        <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
+                        <p class="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Homes Helped</p>
+                        <p class="mt-3 text-4xl font-semibold text-slate-900 sm:text-5xl">
+                            <span class="counter-value" data-counter="1200" data-counter-suffix="+">0</span>
+                        </p>
+                        <p class="mt-3 text-sm leading-7 text-slate-600">Service visits focused on repairs, replacements, and practical plumbing upgrades.</p>
+                    </article>
+                    <article data-aos="fade-up" data-aos-delay="180" class="stats-card rounded-[1.6rem] bg-white px-5 py-6 text-center shadow-sm shadow-slate-200/60 transition">
+                        <span class="mx-auto flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                             <i class="fa-solid fa-phone-volume"></i>
                         </span>
-                        <div>
-                            <p class="text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Fast Response</p>
-                            <p class="mt-2 text-sm leading-7 text-slate-600">Straightforward scheduling and real service help when plumbing problems cannot wait.</p>
-                        </div>
-                    </div>
+                        <p class="mt-4 text-sm font-semibold uppercase tracking-[0.18em] text-slate-500">Emergency Access</p>
+                        <p class="mt-3 text-4xl font-semibold text-slate-900 sm:text-5xl">
+                            <span class="counter-value" data-counter="24" data-counter-suffix="/7">0</span>
+                        </p>
+                        <p class="mt-3 text-sm leading-7 text-slate-600">Fast scheduling support when plumbing problems need attention without delay.</p>
+                    </article>
                 </div>
             </div>
         </section>
@@ -145,13 +164,13 @@
                     <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                         Core Services
                     </span>
-                    <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">Practical plumbing services for the parts of the home that matter most.</h2>
+                    <h2 class="section-heading mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">Practical plumbing services for the parts of the home that matter most.</h2>
                     <p class="mt-5 text-base leading-8 text-slate-600">Whether you need a targeted repair or a larger upgrade, the goal is the same: solve the issue clearly, cleanly, and without making the process harder than it needs to be.</p>
                 </div>
 
                 <div class="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
                     <a href="./sump-pump-installation.html" data-aos="fade-up"
-                        class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
+                        class="service-card group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
                         <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                             <i class="fa-solid fa-arrow-down-short-wide text-lg"></i>
                         </span>
@@ -161,7 +180,7 @@
                     </a>
 
                     <a href="./re-pipe-pipe-replacement.html" data-aos="fade-up" data-aos-delay="80"
-                        class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
+                        class="service-card group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
                         <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                             <i class="fa-solid fa-screwdriver-wrench text-lg"></i>
                         </span>
@@ -171,7 +190,7 @@
                     </a>
 
                     <a href="./residential-water-heaters.html" data-aos="fade-up" data-aos-delay="140"
-                        class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
+                        class="service-card group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
                         <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                             <i class="fa-solid fa-fire-flame-simple text-lg"></i>
                         </span>
@@ -180,7 +199,7 @@
                         <span class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-[#1b78ab]">Learn More <i class="fa-solid fa-arrow-right text-xs transition group-hover:translate-x-1"></i></span>
                     </a>
                     <a href="./drain-cleaning.html" data-aos="fade-up"
-                        class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
+                        class="service-card group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
                         <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                             <i class="fa-solid fa-droplet text-lg"></i>
                         </span>
@@ -190,7 +209,7 @@
                     </a>
 
                     <a href="./water-line-repair.html" data-aos="fade-up" data-aos-delay="80"
-                        class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
+                        class="service-card group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
                         <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                             <i class="fa-solid fa-water text-lg"></i>
                         </span>
@@ -200,7 +219,7 @@
                     </a>
 
                     <a href="./garbage-disposal.html" data-aos="fade-up" data-aos-delay="140"
-                        class="group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
+                        class="service-card group rounded-[2rem] border border-slate-200 bg-white p-7 shadow-[0_16px_36px_rgba(15,23,42,0.04)] transition hover:-translate-y-1 hover:shadow-[0_22px_50px_rgba(15,23,42,0.08)]">
                         <span class="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                             <i class="fa-solid fa-sink text-lg"></i>
                         </span>
@@ -219,11 +238,11 @@
                         <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                             Why Homeowners Call
                         </span>
-                        <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">A plumbing company should make the situation clearer, not more stressful.</h2>
+                        <h2 class="section-heading mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">A plumbing company should make the situation clearer, not more stressful.</h2>
                         <p class="mt-5 text-base leading-8 text-slate-600">That starts with showing up prepared, explaining the problem in plain language, and recommending work that matches what the home actually needs. The goal is dependable service with less guesswork and less friction.</p>
 
                         <div class="mt-8 grid gap-4">
-                            <div class="flex items-start gap-4 rounded-[1.7rem] border border-slate-200 bg-[#fbfdff] p-5" data-aos="fade-up" data-aos-delay="80">
+                            <div class="detail-card flex items-start gap-4 rounded-[1.7rem] border border-slate-200 bg-[#fbfdff] p-5 transition" data-aos="fade-up" data-aos-delay="80">
                                 <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                                     <i class="fa-solid fa-comments"></i>
                                 </span>
@@ -232,7 +251,7 @@
                                     <p class="mt-2 text-sm leading-7 text-slate-600">Straight answers about what is happening, what needs attention first, and what the next step should be.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4 rounded-[1.7rem] border border-slate-200 bg-[#fbfdff] p-5" data-aos="fade-up" data-aos-delay="140">
+                            <div class="detail-card flex items-start gap-4 rounded-[1.7rem] border border-slate-200 bg-[#fbfdff] p-5 transition" data-aos="fade-up" data-aos-delay="140">
                                 <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                                     <i class="fa-solid fa-house"></i>
                                 </span>
@@ -241,7 +260,7 @@
                                     <p class="mt-2 text-sm leading-7 text-slate-600">Clean working habits and a service experience that feels organized, careful, and professional.</p>
                                 </div>
                             </div>
-                            <div class="flex items-start gap-4 rounded-[1.7rem] border border-slate-200 bg-[#fbfdff] p-5" data-aos="fade-up" data-aos-delay="200">
+                            <div class="detail-card flex items-start gap-4 rounded-[1.7rem] border border-slate-200 bg-[#fbfdff] p-5 transition" data-aos="fade-up" data-aos-delay="200">
                                 <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC]/10 text-[#42A5DC]">
                                     <i class="fa-solid fa-circle-check"></i>
                                 </span>
@@ -253,7 +272,7 @@
                         </div>
                     </div>
 
-                    <div data-aos="zoom-in" class="overflow-hidden rounded-[2.2rem] border border-slate-200 bg-[#f2f8fc] p-3 shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
+                    <div data-aos="zoom-in" class="image-frame overflow-hidden rounded-[2.2rem] border border-slate-200 bg-[#f2f8fc] p-3 shadow-[0_18px_40px_rgba(15,23,42,0.05)]">
                         <img src="https://images.unsplash.com/photo-1749532125405-70950966b0e5?q=80&w=1171&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Replace with plumbing team or service image"
                             class="h-[22rem] w-full rounded-[1.7rem] object-cover sm:h-[49rem]" />
                     </div>
@@ -289,7 +308,7 @@
                     <span class="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/8 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#8fd0f1]">
                         How Service Works
                     </span>
-                    <h2 class="mt-5 text-3xl font-semibold sm:text-4xl">A cleaner process from the first phone call to the finished job.</h2>
+                    <h2 class="section-heading section-heading--center mt-5 text-2xl font-semibold sm:text-4xl">A cleaner process from the first phone call to the finished job.</h2>
                     <p class="mt-5 text-base leading-8 text-white/72">Homeowners should know what comes next. The process stays simple, with clear communication, practical scheduling, and work focused on the actual plumbing issue.</p>
                 </div>
 
@@ -320,7 +339,7 @@
                         <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                             Service Coverage
                         </span>
-                        <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">Plumbing support for everyday home problems and larger replacement work.</h2>
+                        <h2 class="section-heading mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">Plumbing support for everyday home problems and larger replacement work.</h2>
                         <p class="mt-5 text-base leading-8 text-slate-600">Some service calls need quick troubleshooting. Others need a more complete repair plan. The home page should make it clear that Plumber Near Me can handle both routine plumbing concerns and more involved residential work.</p>
 
                         <div class="mt-8 grid gap-4 sm:grid-cols-2">
@@ -388,7 +407,7 @@
                         <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                             Client Feedback
                         </span>
-                        <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">What homeowners want most is confidence that the service call was worth making.</h2>
+                        <h2 class="section-heading mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">What homeowners want most is confidence that the service call was worth making.</h2>
                     </div>
                     <p data-aos="fade-up" data-aos-delay="100" class="max-w-2xl text-base leading-8 text-slate-600">The right experience feels professional, responsive, and easy to understand. That is the standard these reviews are meant to reflect.</p>
                 </div>
@@ -425,7 +444,7 @@
                     <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                         Common Questions
                     </span>
-                    <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">Answers for homeowners before they book plumbing service.</h2>
+                    <h2 class="section-heading section-heading--center mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">Answers for homeowners before they book plumbing service.</h2>
                     <p class="mt-5 text-base leading-8 text-slate-600">The FAQ preview keeps the home page useful while pointing visitors to the full FAQ page for more detailed information.</p>
                 </div>
 
@@ -490,7 +509,7 @@
                         <span class="inline-flex items-center gap-2 rounded-full bg-[#42A5DC]/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.22em] text-[#1b78ab]">
                             Ready To Book
                         </span>
-                        <h2 class="mt-5 text-3xl font-semibold text-slate-900 sm:text-4xl">Tell us what is going on at home and get the next step moving.</h2>
+                        <h2 class="section-heading mt-5 text-2xl font-semibold text-slate-900 sm:text-4xl">Tell us what is going on at home and get the next step moving.</h2>
                         <p class="mt-5 text-base leading-8 text-slate-600">Whether you are dealing with a drain issue, a water heater problem, or plumbing work that needs a larger replacement plan, the contact page is the best place to start.</p>
                         <div class="mt-8 flex flex-col gap-4 sm:flex-row">
                             <a href="./contact-us.html"
@@ -530,6 +549,10 @@
 </body>
 
 </html>
+
+
+
+
 
 
 

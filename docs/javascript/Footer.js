@@ -5,14 +5,14 @@ if (footer) {
 
   footer.innerHTML = `
     <footer
-      class="mt-4 w-full overflow-hidden bg-slate-950 text-white"
-      style="background-image: linear-gradient(135deg, rgba(16, 24, 39, 0.95), rgba(48, 54, 61, 0.9)), url('${footerBackgroundImage}'); background-size: cover; background-position: center;"
+      class="footer-shell mt-4 w-full overflow-hidden bg-slate-950 text-white"
+      style="background-image: linear-gradient(135deg, rgba(16, 24, 39, 0.95), rgba(48, 54, 61, 0.88)), url('${footerBackgroundImage}'); background-size: cover; background-position: center;"
     >
-      <div class="border-t border-white/10 px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
+      <div class="relative border-t border-white/10 px-4 py-10 sm:px-6 lg:px-8 lg:py-12">
         <div class="mx-auto grid max-w-7xl gap-8 md:grid-cols-2 xl:grid-cols-[1.05fr_0.8fr_1fr_0.95fr]">
-          <div>
+          <div class="footer-card rounded-[1.7rem] border border-white/10 p-6">
             <div class="flex items-center gap-3">
-              <span class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC] text-white shadow-[0_14px_28px_rgba(66,165,220,0.24)]">
+              <span class="brand-mark flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-[#42A5DC] text-white shadow-[0_18px_34px_rgba(66,165,220,0.28)]">
                 <i class="fa-solid fa-faucet-drip"></i>
               </span>
               <div>
@@ -23,9 +23,14 @@ if (footer) {
             <p class="mt-4 max-w-sm text-sm leading-7 text-slate-300">
               Professional plumbing support for homeowners who want dependable service, cleaner work, and a better experience from the first call.
             </p>
+            <div class="mt-5 flex flex-wrap gap-2">
+              <span class="rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#8fd0f1]">Drain Help</span>
+              <span class="rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#8fd0f1]">Water Heaters</span>
+              <span class="rounded-full border border-white/10 bg-white/6 px-3 py-2 text-[0.68rem] font-semibold uppercase tracking-[0.2em] text-[#8fd0f1]">Pipe Repairs</span>
+            </div>
           </div>
 
-          <div>
+          <div class="footer-card rounded-[1.7rem] border border-white/10 p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#8fd0f1]">Quick Links</p>
             <ul class="mt-4 space-y-3 text-sm text-slate-300">
               <li><a href="./index.html" class="transition hover:text-white">Home</a></li>
@@ -35,7 +40,7 @@ if (footer) {
             </ul>
           </div>
 
-          <div>
+          <div class="footer-card rounded-[1.7rem] border border-white/10 p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#8fd0f1]">Services</p>
             <ul class="mt-4 grid gap-3 text-sm text-slate-300 sm:grid-cols-2 xl:grid-cols-1">
               <li><a href="./sump-pump-installation.html" class="transition hover:text-white">Sump Pump Installation</a></li>
@@ -47,7 +52,7 @@ if (footer) {
             </ul>
           </div>
 
-          <div>
+          <div class="footer-card rounded-[1.7rem] border border-white/10 p-6">
             <p class="text-xs font-semibold uppercase tracking-[0.25em] text-[#8fd0f1]">Contact</p>
             <div class="mt-4 space-y-4 text-sm text-slate-300">
               <a href="tel:0000000000" class="flex items-start gap-3 transition hover:text-white">
@@ -73,7 +78,7 @@ if (footer) {
         </div>
       </div>
 
-      <div class="border-t border-white/10 px-4 py-5 sm:px-6 lg:px-8">
+      <div class="relative border-t border-white/10 px-4 py-5 sm:px-6 lg:px-8">
         <div class="mx-auto flex max-w-7xl flex-col gap-3 text-sm text-slate-400 sm:flex-row sm:items-center sm:justify-between">
           <p>&copy; <span data-year></span> Plumber Near Me. All rights reserved.</p>
           <div class="flex flex-wrap items-center gap-4">
@@ -85,4 +90,3 @@ if (footer) {
     </footer>
   `;
 }
-
