@@ -1,0 +1,207 @@
+* {
+    box-sizing: border-box;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: #f7fbfe;
+}
+
+body.is-loading {
+    overflow: hidden;
+}
+
+img,
+button,
+a,
+video {
+    user-select: none;
+}
+
+.font-display {
+    font-family: "Poppins", sans-serif;
+}
+
+.page-spacer {
+    min-height: 60vh;
+}
+
+.site-header {
+    transition: background-color 240ms ease, box-shadow 240ms ease, border-color 240ms ease;
+}
+
+.site-header.is-scrolled {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 0 16px 40px rgba(15, 23, 42, 0.08);
+    border-color: rgba(226, 232, 240, 0.95);
+}
+
+.plumber-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.plumber-hero__video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.plumber-hero__shade {
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(15, 23, 32, 0.88) 0%, rgba(15, 23, 32, 0.74) 45%, rgba(15, 23, 32, 0.58) 100%),
+        radial-gradient(circle at top right, rgba(66, 165, 220, 0.28), transparent 28%);
+}
+
+.plumber-hero__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    background-size: 36px 36px;
+    opacity: 0.35;
+}
+
+.plumber-hero__panel {
+    position: relative;
+    background: linear-gradient(160deg, rgba(66, 165, 220, 0.18), rgba(255, 255, 255, 0.05));
+    box-shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
+}
+
+.plumber-hero__panel::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border-radius: 1.4rem;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    pointer-events: none;
+}
+
+.hero-frame {
+    position: relative;
+    background: linear-gradient(160deg, rgba(66, 165, 220, 0.16), rgba(255, 255, 255, 0.03));
+    box-shadow: 0 24px 80px rgba(2, 6, 23, 0.35);
+}
+
+.hero-frame::before {
+    content: "";
+    position: absolute;
+    inset: 1rem;
+    border-radius: 1.4rem;
+    border: 1px solid rgba(66, 165, 220, 0.18);
+    pointer-events: none;
+}
+
+input:user-invalid {
+    border: 1.5px solid rgba(255, 0, 0, 0.35);
+}
+
+.faq-item .faq-panel {
+    height: 0;
+    overflow: hidden;
+}
+
+.faq-item .faq-panel-inner {
+    overflow: hidden;
+}
+
+.site-loader {
+    position: fixed;
+    inset: 0;
+    z-index: 120;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background:
+        radial-gradient(circle at top, rgba(66, 165, 220, 0.95), rgba(15, 23, 32, 0.98) 62%);
+    transition: opacity 420ms ease, visibility 420ms ease;
+}
+
+.site-loader.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.site-loader__panel {
+    width: min(100%, 24rem);
+    padding: 2rem 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.75rem;
+    background: rgba(2, 6, 23, 0.48);
+    box-shadow: 0 28px 80px rgba(2, 6, 23, 0.38);
+    text-align: center;
+    backdrop-filter: blur(14px);
+}
+
+.site-loader__mark {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 4.75rem;
+    height: 4.75rem;
+    border-radius: 999px;
+    background: rgba(66, 165, 220, 0.82);
+    color: #ffffff;
+    font-size: 1.1rem;
+}
+
+.site-loader__ring {
+    position: absolute;
+    inset: -0.55rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.18);
+    border-top-color: #ffffff;
+    border-radius: inherit;
+    animation: site-loader-spin 1s linear infinite;
+}
+
+.site-loader__eyebrow {
+    margin: 1.5rem 0 0;
+    color: #d8eefb;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.32em;
+    text-transform: uppercase;
+}
+
+.site-loader__title {
+    margin: 0.9rem 0 0;
+    color: #fff;
+    font-family: "Poppins", sans-serif;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    font-weight: 700;
+    line-height: 0.95;
+    text-transform: uppercase;
+}
+
+.site-loader__text {
+    margin: 0.85rem 0 0;
+    color: rgba(226, 232, 240, 0.9);
+    font-size: 0.95rem;
+    line-height: 1.7;
+}
+
+@keyframes site-loader-spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 1023px) {
+    .page-spacer {
+        min-height: 50vh;
+    }
+}
